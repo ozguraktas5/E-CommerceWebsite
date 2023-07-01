@@ -703,9 +703,7 @@ form.search button:hover {
   top: -5px;
 }
 
-.trending .products {
-  flex: 0 0 30%;
-}
+
 
 /* 04. PRODUCT */
 /* a. Global Product */
@@ -741,6 +739,108 @@ form.search button:hover {
   right: -0.6em;
   color: var(--light-text-color);
 }
+
+.products :where(.image, .thumbnail) img {
+  transition: transform .3s;
+}
+
+.products :where(.image, .thumbnail):hover img {
+  transform: scale(1.1);
+}
+
+.products .hoverable {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.products .hoverable li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: var(--percent50);
+  line-height: 1;
+  background-color: var(--white-color);
+  opacity: .5;
+  transition: var(--trans-background-color), opacity .3s;
+}
+
+.products .item:hover .hoverable li a {
+  opacity: 1;
+}
+
+.products .hoverable li a:hover {
+  color: var(--white-color);
+  background-color: var(--dark-color);
+}
+
+.products .hoverable li.active a:hover {
+  background-color: var(--primary-color);
+}
+
+.products .hoverable li:not(.active) {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform .3s, opacity .2s;
+}
+
+.products .item:hover .hoverable li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.products .hoverable li:last-child {
+  transition-delay: .1s;
+}
+
+.products .discount {
+  top: auto;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.products .discount::before {
+  background-color: var(--dark-color);
+}
+
+.products .discount span {
+  position: relative;
+  font-size: var(--font-smaller);
+  font-weight: var(--fw5);
+  color: var(--white-color);
+}
+
+.products .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.products:where(.big,.main.one) .content {
+  gap: 1em;
+  margin-top: 1.25em;
+}
+
+
+/* 04. PRODUCT */
+/* b. BIG Product*/
+
+.products.big .item {
+  flex-direction: column;
+  padding: 2.5em;
+  border: 2px solid var(--secondary-dark-color);
+  border-radius: 7px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+
 
 
 @media screen and (min-width: 992px) {
@@ -939,9 +1039,20 @@ form.search button:hover {
   width: calc(100% - (300px + 2em));
   margin-left: auto;
 }
+
+  /* products */
+  .trending .products {
+    flex: 0 0 30%;
+  }
+
+  .products.big .media {
+    max-height: 373px;
+  }
 }
 
-/* 1:20:02'de kaldım */
+/* 1:26:04'de kaldım */
+
+
 
 
 
