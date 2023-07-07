@@ -1028,6 +1028,45 @@ form.search button:hover {
   font-size: 80%;
 }
 
+.banner .primary-button {
+  z-index: 3;
+}
+
+.banners .product-categories .item {
+  display: flex;
+  padding: 1.5em;
+  
+}
+
+.banners .product-categories .image {
+  max-width: 150px;
+}
+
+.mini-links ul {
+  font-size: var(--font-small);
+  color: var(--light-text-color);
+  margin-top: 1em;
+}
+
+.banners .second-links {
+  margin-top: 2em;
+}
+
+.mini-links li a:hover {
+  text-decoration: underline;
+}
+
+/* 05. FOOTER*/
+/* a. News Letter*/
+
+
+
+
+
+
+
+
+
 
 /* 15. RESPONSIVE*/
 
@@ -1248,8 +1287,11 @@ form.search button:hover {
 }
 
   /* products */
-  .trending .products {
+  .trending .products,
+  .product-categories .row {
     flex: 0 0 30%;
+    border: 1px solid rgb(227, 225, 225);
+    
   }
 
   .products.big .media {
@@ -1261,7 +1303,7 @@ form.search button:hover {
   }
 }
 
-/* 1:44:59'da kaldım */
+/* 1:50:01'de kaldım */
 
 
 
