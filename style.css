@@ -130,11 +130,15 @@ h4 {
 .flexcol {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  
 }
 
 .main-links a:hover {
   color: var(--secondary-color);
+}
+
+nav.mobile-hide ul.flexitem li.has-child {
+  z-index: 1000;
 }
 
 .second-links a:hover {
@@ -390,7 +394,7 @@ nav .fly-item {
 
 .dpt-cat .dpt-head {
   position: relative;
-  width: 300px;
+  width: 253px;
   padding: 0.75em 1.5em;
   background-color: var(--primary-color);
   border-radius: 7px 7px 0 0;
@@ -422,6 +426,7 @@ nav .fly-item {
 
   .dpt-menu .has-child li a:hover{
     text-decoration: underline;
+    
   }
 }
 
@@ -438,7 +443,7 @@ form {
 
 form.search input {
   line-height: 3.25em;
-  padding: 0 0 0 1.1em;
+  padding: 0 6em 0 3.5em;
   border: 0;
   outline: 0;
   width: var(--percent100);
@@ -635,8 +640,8 @@ form.search button:hover {
 .slider .text-content {
   position: relative;
   height: var(--percent100);
-  justify-content: flex-end;
-  padding: 0 0 10% 10%;
+  justify-content: center;
+  padding: 10% 0 10% 10%;
   z-index: 1;
 }
 
@@ -655,12 +660,16 @@ form.search button:hover {
 .text-content :where(h2, h3) span:first-child {
   font-weight: var(--fw3);
   color: var(--light-text-color);
+  font-size: 1.5rem;
+  
 }
 
 .text-content :where(h2, h3) span:last-child {
   color: var(--secondary-dark-color);
   text-transform: uppercase;
   letter-spacing: -1px;
+  font-size: 2rem;
+  
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
@@ -1228,6 +1237,11 @@ form.search button:hover {
   opacity: 0;
 }
 
+.showmenu .overlay {
+  opacity: 0;
+  
+}
+
 
 
 
@@ -1406,12 +1420,17 @@ form.search button:hover {
   }
 
   /* showing the first sub menu */
+  .dpt-menu {
+    padding: 0;
+  }
+
   .dpt-menu .mega {
     display: block;
   }
 
   .dpt-menu .beauty ul {
     background-image: url("assets/menu/menu_bg1.jpg");
+    
   }
 
   .dpt-menu .electric ul {
@@ -1424,6 +1443,17 @@ form.search button:hover {
 
   .dpt-menu .homekit .mega {
     background-image: url("assets/menu/menu_bg4.jpg");
+    
+  }
+
+  .dpt-menu .homekit .mega .flexcol li {
+    margin-bottom: -5px;
+  }
+
+  .dpt-menu .homekit .mega .flexcol li a {
+    font-weight: 500;
+    font-size: 0.8rem;
+    
   }
 
   .dpt-menu .has-child > :where(ul, .mega)::before {
@@ -1442,6 +1472,7 @@ form.search button:hover {
 
   .dpt-menu .mega {
     width: auto;
+    height: 100%;
     min-width: var(--percent100);
     display: none;
   }

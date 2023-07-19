@@ -24,6 +24,7 @@ const closeButton = document.querySelector(".t-close");
 const addclass = document.querySelector(".site");
 menuButton.addEventListener("click", function () {
   addclass.classList.toggle("showmenu");
+  
 });
 closeButton.addEventListener("click", function () {
   addclass.classList.remove("showmenu");
@@ -57,6 +58,7 @@ const swiper = new Swiper(".swiper", {
 const searchButton = document.querySelector('.t-search'),
   tClose = document.querySelector('.search-close'),
   showClass = document.querySelector('.site');
+  triggerDesktop = document.querySelector('.trigger')
 
 searchButton.addEventListener('click', function() {
   showClass.classList.toggle('showsearch')
@@ -64,3 +66,5 @@ searchButton.addEventListener('click', function() {
 tClose.addEventListener('click', function() {
   showClass.classList.remove('showsearch')
 })
+
+
