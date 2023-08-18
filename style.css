@@ -445,6 +445,10 @@ nav .fly-item {
   padding: 0;
 }
 
+.dpt-menu .second-links > li > a{
+  padding: 0;
+}
+
 /* 01. HEADER */
 /* d. Search Form*/
 
@@ -586,7 +590,6 @@ form.search button:hover {
   align-items: flex-start;
   font-size: var(--font-small);
   line-height: 36px;
-  
   margin: 1.25em 0;
   border-top: 1px solid var(--border-color);
 }
